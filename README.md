@@ -4,7 +4,7 @@
 
 It's a 1v1 game where the player with best strategy wins
 
-![Initial board](assets/initial_board.png)
+![Initial board](assets/initial_board.PNG)
 
 The game is played on a 6x6 board divided in 4 3x3 sub-boards.
 
@@ -19,7 +19,7 @@ Every turn, you get to see the state of the entire board.
 
 The goal of the game is to get five of their marbles consequetively in a vertical, horizontal or diagonal row (after rotation of the subrow)
 
-![winning moment](assets/winning.png)
+![winning moment](assets/winning.PNG)
 
 In the image above, the green marble wins because it has 5 consecutive marbles in the first column
 
@@ -30,7 +30,7 @@ At each game step, you'll be provided with the current state of the board ie: Th
 For example:
 Initally, player 1 will see:
 
-![initial state](assets/initial_board.png)
+![initial state](assets/initial_board.PNG)
 
 And after this, when it's the turn of player 2, he'll see:
 
