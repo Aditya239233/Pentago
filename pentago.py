@@ -111,6 +111,46 @@ class Pentago(HBDenv):
                 self.winner = 2
                 self.done = True
             return
+        
+        # Checking for other diagonals
+        if (len(set(np.diag(self.board[:5, :5])[:])) == 1 and np.diag(self.board)[0] != 0):
+            if np.diag(self.board[:5,:5])[1] == 1:
+                self.winner = 1
+                self.done = True
+
+            elif np.diag(self.board)[1] == 2:
+                self.winner = 2
+                self.done = True
+            return
+
+        if (len(set(np.diag(self.board[1:, :5])[:])) == 1 and np.diag(self.board[1:, :5])[0] != 0):
+            if np.diag(self.board[1:,:5])[1] == 1:
+                self.winner = 1
+                self.done = True
+
+            elif np.diag(self.board[1:,:5])[1] == 2:
+                self.winner = 2
+                self.done = True
+            return
+
+        if (len(set(np.diag(np.fliplr(self.board[:5, 1:]))[:-1])) == 1 and np.diag(np.fliplr(self.board[:5, 1:]))[0] != 0):
+            if np.diag(np.fliplr(self.board[:5, 1:]))[1] == 1:
+                self.winner = 1
+                self.done = True
+            elif np.diag(np.fliplr(self.board[:5, 1:]))[1] == 2:
+                self.winner = 2
+                self.done = True
+            return 
+
+        if (len(set(np.diag(np.fliplr(self.board[1:, 1:]))[:-1])) == 1 and np.diag(np.fliplr(self.board[1:, 1:]))[0] != 0):
+            if np.diag(np.fliplr(self.board[1:, 1:]))[1] == 1:
+                self.winner = 1
+                self.done = True
+            elif np.diag(np.fliplr(self.board[1:, 1:]))[1] == 2:
+                self.winner = 2
+                self.done = True
+            return 
+
 
         for i in range(6):
             if (len(set(self.board[i][:-1])) == 1 or len(set(self.board[i][1:])) == 1) and self.board[i][1] != 0:

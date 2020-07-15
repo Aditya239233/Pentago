@@ -23,6 +23,12 @@ The goal of the game is to get five of their marbles consequetively in a vertica
 
 In the image above, the green marble wins because it has 5 consecutive marbles in the first column
 
+
+#### Note: 
+There are 4 diagonals with 5 values in them. If 5 marbles are placed consequetively there also, a player wins. An example of one such diagonal is:
+
+![diagonal condition](assets/diagonal_condition.PNG)
+
 ### Percepts
 
 At each game step, you'll be provided with the current state of the board ie: The current orientation of the board.
